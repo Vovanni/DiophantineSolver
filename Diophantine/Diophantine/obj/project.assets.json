@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vovan\\source\\repos\\Diophantine\\Diophantine\\Diophantine.csproj",
+      "projectUniqueName": "D:\\System\\Documents\\Repos\\DiophantineSolver\\Diophantine\\Diophantine\\Diophantine.csproj",
       "projectName": "Diophantine",
-      "projectPath": "C:\\Users\\Vovan\\source\\repos\\Diophantine\\Diophantine\\Diophantine.csproj",
+      "projectPath": "D:\\System\\Documents\\Repos\\DiophantineSolver\\Diophantine\\Diophantine\\Diophantine.csproj",
       "packagesPath": "C:\\Users\\Vovan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vovan\\source\\repos\\Diophantine\\Diophantine\\obj\\",
+      "outputPath": "D:\\System\\Documents\\Repos\\DiophantineSolver\\Diophantine\\Diophantine\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -9,3 +9,14 @@ C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diop
 C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.pdb
 C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.dll
 C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.pdb
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.deps.json
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.runtimeconfig.json
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.runtimeconfig.dev.json
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.dll
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.pdb
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.csprojAssemblyReference.cache
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.csproj.CoreCompileInputs.cache
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.AssemblyInfoInputs.cache
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.AssemblyInfo.cs
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.dll
+D:\System\Documents\Repos\DiophantineSolver\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.pdb

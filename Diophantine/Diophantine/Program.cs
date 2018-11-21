@@ -8,6 +8,8 @@ namespace Diophantine
         static int d;
         static int membersGenerated = 0;
         static int[] arrayOfa;
+        static int[] arrayOfx;
+        static int bruteForceIterations;
         static double sum;
         static Member[] members;
 
@@ -15,21 +17,57 @@ namespace Diophantine
         {
             Console.WriteLine("Данная программа решает линейные диофантовы уравнения вида:\nA0*X0+A1*X1+A2*X2+...+Ak*Xk=d (При k>1)");
             userDialog();
-            computeIterations();
-            Console.Write("Всего итераций: ");
-            writeWithColor(members.Length + "\nБудет сгенерировано 10% от данного числа.\n", ConsoleColor.Green, false);
-            writeWithColor("Начало. Генерация особей.", ConsoleColor.Green);
-            firstGeneration();
-            updateSuitables();
-            Console.WriteLine("Для продолжения нажмите любую клавишу...");
-            Console.ReadKey();
-            for (int i = membersGenerated; i < members.Length; i++)
+            if (userDialogType())   //Расчет методом генетического алгоритма
             {
-                writeWithColor("Итерация №" + (i), ConsoleColor.Green);
-                members[i] = newMember();
+                computeIterations();
+                Console.Write("Всего итераций: ");
+                writeWithColor(members.Length + "\nБудет сгенерировано 10% от данного числа.\n", ConsoleColor.Green, false);
+                writeWithColor("Начало. Генерация особей.", ConsoleColor.Green);
                 updateSuitables();
                 Console.WriteLine("Для продолжения нажмите любую клавишу...");
                 Console.ReadKey();
+                for (int i = membersGenerated; i < members.Length; i++)
+                {
+                    writeWithColor("Итерация №" + (i), ConsoleColor.Green);
+                    members[i] = newMember();
+                    updateSuitables();
+                    Console.WriteLine("Для продолжения нажмите любую клавишу...");
+                    Console.ReadKey();
+                }
+            }
+            else
+            {
+                arrayOfx = new int[arrayOfa.Length];
+                bruteForceIterations = 0;
+                bruteForce();
+                Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
+                Console.ReadKey();
+            }
+        }
+
+        static void bruteForce(int i = 0, int sumOfx = 0)   //Метод грубой силы
+        {
+            bruteForceIterations++;
+            if (i == arrayOfx.Length)
+            {
+                if (sumOfx == d)
+                {
+                    writeWithColor("Решение найдено за " + bruteForceIterations + " итераций");
+                    foreach (int mem in arrayOfx)
+                    {
+                        Console.Write(mem + " ");
+                    }
+                    Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+                return;
+            }
+            else
+            for (int k = 1; k < ((d - arrayOfx.Length) / arrayOfa[i]) + 1; k++)
+            {
+                arrayOfx[i] = k;
+                    bruteForce(i + 1, sumOfx + k * arrayOfa[i]);
             }
         }
 
@@ -53,6 +91,19 @@ namespace Diophantine
             }
             userDialogIterations(ref iterations);
             members = new Member[iterations];
+        }
+        
+        static bool userDialogType()
+        {
+            writeWithColor("Выберите метод решения:\n1 - Генетический алгоритм;\n2 - Метод перебора.", ConsoleColor.Green);
+            string key = Console.ReadLine();
+            if (key[0] == '1') return true;
+            else if (key[0] == '2') return false;
+            else
+            {
+                error("Введен неверный символ");
+                return userDialogType();
+            }
         }
 
         static void userDialogIterations(ref int iterations)
@@ -258,7 +309,7 @@ namespace Diophantine
 
         static void firstGeneration()   //Начальная генерация особей
         {
-            for (int i = 0; i < (members.Length / percentageOfMembers + 1); i++) //Процент особей хранится в переменной
+            for (int i = 0; i < ((members.Length / percentageOfMembers) + 1); i++) //Процент особей хранится в переменной
             {
                 members[i] = new Member(ref arrayOfa, ref d);
                 if (i > 0)              //Генерируем только оригинальные особи
