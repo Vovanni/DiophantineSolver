@@ -1,0 +1,11 @@
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.csprojAssemblyReference.cache
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.csproj.CoreCompileInputs.cache
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.AssemblyInfoInputs.cache
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.AssemblyInfo.cs
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.deps.json
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.runtimeconfig.json
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.runtimeconfig.dev.json
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.dll
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\bin\Debug\netcoreapp2.1\Diophantine.pdb
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.dll
+C:\Users\Vovan\source\repos\Diophantine\Diophantine\obj\Debug\netcoreapp2.1\Diophantine.pdb
