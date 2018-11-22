@@ -12,6 +12,8 @@ namespace Diophantine
         static int bruteForceIterations;
         static double sum;
         static Member[] members;
+        static DateTime startTime;
+        static TimeSpan endTime;
 
         static void Main(string[] args)
         {
@@ -23,16 +25,18 @@ namespace Diophantine
                 Console.Write("Всего итераций: ");
                 writeWithColor(members.Length + "\nБудет сгенерировано 10% от данного числа.\n", ConsoleColor.Green, false);
                 writeWithColor("Начало. Генерация особей.", ConsoleColor.Green);
+                startTime = DateTime.Now;
+                firstGeneration();
                 updateSuitables();
-                Console.WriteLine("Для продолжения нажмите любую клавишу...");
-                Console.ReadKey();
+                //Console.WriteLine("Для продолжения нажмите любую клавишу...");
+                //Console.ReadKey();
                 for (int i = membersGenerated; i < members.Length; i++)
                 {
                     writeWithColor("Итерация №" + (i), ConsoleColor.Green);
                     members[i] = newMember();
                     updateSuitables();
-                    Console.WriteLine("Для продолжения нажмите любую клавишу...");
-                    Console.ReadKey();
+                    //Console.WriteLine("Для продолжения нажмите любую клавишу...");
+                    //Console.ReadKey();
                 }
             }
             else
@@ -57,6 +61,8 @@ namespace Diophantine
                     {
                         Console.Write(mem + " ");
                     }
+                    endTime = DateTime.Now - startTime;
+                    Console.WriteLine("Решение найдено за:" + endTime);
                     Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
                     Console.ReadKey();
                     Environment.Exit(0);
@@ -309,7 +315,8 @@ namespace Diophantine
 
         static void firstGeneration()   //Начальная генерация особей
         {
-            for (int i = 0; i < ((members.Length / percentageOfMembers) + 1); i++) //Процент особей хранится в переменной
+            membersGenerated = (members.Length / percentageOfMembers) + 1;//Подсчет сгенерированных особей
+            for (int i = 0; i < membersGenerated; i++) //Процент особей хранится в переменной
             {
                 members[i] = new Member(ref arrayOfa, ref d);
                 if (i > 0)              //Генерируем только оригинальные особи
@@ -319,7 +326,6 @@ namespace Diophantine
                         members[i] = new Member(ref arrayOfa, ref d);
                     }
                 }
-                membersGenerated++; //Подсчет сгенерированных особей
                 sum += (1 / (double)members[i].survivality); //Подсчитываем сумму для расчета в процентах
             }
         }
@@ -346,6 +352,8 @@ namespace Diophantine
         {
             writeWithColor("Найдено следующее решение:", ConsoleColor.Green);
             writeMember(i, false);
+            endTime = DateTime.Now - startTime;
+            Console.WriteLine("Решение найдено за:" + endTime);
             Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
             Console.ReadKey();
             Environment.Exit(0);
